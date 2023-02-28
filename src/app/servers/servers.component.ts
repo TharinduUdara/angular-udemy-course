@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit  } from '@angular/core';
 
 @Component({
   //selector: '[app-servers]', // element selector chenge to attribute selector by using []
@@ -10,7 +10,8 @@ import { Component, OnInit } from '@angular/core';
 export class ServersComponent implements OnInit {
   allowNewServer = false;
   serverCreationStatus = 'No Server was created!';
-  serverName = '';
+  serverName = 'Testserver';
+
   constructor() {
     setTimeout(() => {
       this.allowNewServer = true;
@@ -28,6 +29,4 @@ export class ServersComponent implements OnInit {
     this.serverName = (<HTMLInputElement>event.target).value;
     // console.log(event);
   }
-
-  
 }
