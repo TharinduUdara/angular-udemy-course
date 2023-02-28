@@ -1,4 +1,4 @@
-import { Component, OnInit} from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 
 @Component({
   //selector: '[app-servers]', // element selector chenge to attribute selector by using []
@@ -8,14 +8,26 @@ import { Component, OnInit} from '@angular/core';
   styleUrls: ['./servers.component.scss'],
 })
 export class ServersComponent implements OnInit {
-    allowNewServer = false;
-    constructor() {
-      setTimeout(()=>{
-        this.allowNewServer = true;
-      },2000)
-     }
-     ngOnInit(): void {
-       
-     }
+  allowNewServer = false;
+  serverCreationStatus = 'No Server was created!';
+  serverName = '';
+  constructor() {
+    setTimeout(() => {
+      this.allowNewServer = true;
+    }, 2000);
+  }
 
+  ngOnInit() {
+  }
+
+  onCreateServer() {
+    this.serverCreationStatus = 'Server was created!';
+  }
+
+  onUpdateServerName(event: any) {
+    this.serverName = (<HTMLInputElement>event.target).value;
+    // console.log(event);
+  }
+
+  
 }
