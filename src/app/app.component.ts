@@ -8,10 +8,11 @@ import { Component } from '@angular/core';
 export class AppComponent {
   title = 'angular-udemy-course';
   showSecret = false;
-  log = [1];    //log eka emtye tibba ai erro 1k enne
+  log = [1]; //log eka emtye tibba ai erro 1k enne
 
   onToggleDetails() {
     this.showSecret = !this.showSecret;
-    this.log.push(this.log.length + 1);
+    // this.log.push(this.log.length + 1);
+    this.log.push(new Date());
   }
 }
