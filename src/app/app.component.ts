@@ -6,5 +6,15 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'angular-udemy-course';
+
+  oddNumbers: number[] = [];
+  evenNumbers: number[] = [];
+
+
+  OnIntervalFired(firedNumber: number) {
+    if(firedNumber % 2 === 0) {
+      this.evenNumbers.push(firedNumber);
+    }else{}
+    this.oddNumbers.push(firedNumber);
+  }    
 }
