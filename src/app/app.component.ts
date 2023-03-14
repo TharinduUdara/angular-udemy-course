@@ -6,5 +6,10 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'angular-udemy-course';
+  
+  loadedFeature ='recipe';
+
+  onNavigate(feature:string){
+    this. loadedFeature = feature;
+  }
 }
