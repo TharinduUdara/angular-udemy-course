@@ -1,28 +1,13 @@
-import { Component } from '@angular/core';
+import { Injectable } from '@angular/core';
 
-@Component({
-  selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css']
+Injectable({
+    providedIn:'root'
 })
-export class AppComponent {
-  serverElements = [];
-  newServerName = '';
-  newServerContent = '';
-
-  onAddServer() {
-    this.serverElements.push({
-      type: 'server',
-      name: this.newServerName,
-      content: this.newServerContent
-    });
+export class calcService{
+  multiply(a: number, b:number){
+    return a * b;
   }
 
-  onAddBlueprint() {
-    this.serverElements.push({
-      type: 'blueprint',
-      name: this.newServerName,
-      content: this.newServerContent
-    });
-  }
 }
+
+
